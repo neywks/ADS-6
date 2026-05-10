@@ -59,6 +59,10 @@ public:
     bool isEmpty() const {
         return head == nullptr;
     }
+
+    int size() const {
+        return count;
+    }
 };
 
 struct SYM {
