@@ -15,7 +15,6 @@ private:
 
 public:
     TPQueue() : head(nullptr), count(0) {}
-
     ~TPQueue() {
         while (head != nullptr) {
             Node* temp = head;
@@ -26,7 +25,6 @@ public:
 
     void push(const T& item) {
         Node* newNo = new Node(item);
-
         if (head == nullptr || item.prior > head->data.prior) {
             newNo->next = head;
             head = newNo;
@@ -48,12 +46,12 @@ public:
         if (head == nullptr) {
             throw "Queue is empty";
         }
-        T res = head->data;
+        T result = head->data;
         Node* temp = head;
         head = head->next;
         delete temp;
         count--;
-        return res;
+        return result;
     }
 
     bool isEmpty() const {
@@ -70,4 +68,4 @@ struct SYM {
     int prior;
 };
 
-#endif 
+#endif // INCLUDE_TPQUEUE_H_
