@@ -2,6 +2,11 @@
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
+struct SYM {
+    char ch;
+    int prior;
+};
+
 template<typename T>
 class TPQueue {
 private:
@@ -61,11 +66,6 @@ public:
     int size() const {
         return count;
     }
-};
-
-struct SYM {
-    char ch;
-    int prior;
 };
 
 #endif // INCLUDE_TPQUEUE_H_
